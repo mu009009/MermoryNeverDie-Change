@@ -1,1 +1,1 @@
- This is a puzzle like game where the player acts as the main character trying to gather information lost from his memory about past world he traveled.
+# MermoryNeverDie
