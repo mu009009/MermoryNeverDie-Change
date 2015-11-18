@@ -28,7 +28,11 @@ public class classdrag : MonoBehaviour {
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(curPos);
         transform.position = worldPos;
 
+<<<<<<< HEAD
         if(GameObject.Find("PlanentScene"))
+=======
+        if(GameObject.Find("GodivaImage"))
+>>>>>>> 030538d46f39f3843591c7b19de7a92c5a9eb4c2
         {
             MouseDraginScence(curPos, worldPos);
         }
@@ -46,7 +50,11 @@ public class classdrag : MonoBehaviour {
 
     void OnMouseUp()
     {
+<<<<<<< HEAD
         if (GameObject.Find("PlanentScene"))
+=======
+        if (GameObject.Find("GodivaImage"))
+>>>>>>> 030538d46f39f3843591c7b19de7a92c5a9eb4c2
         {
             OnmouseUpinScence();
         }
@@ -61,16 +69,27 @@ public class classdrag : MonoBehaviour {
     {
         if (Input.mousePosition.y > 52)
         {
+<<<<<<< HEAD
             var CenterPart = GameObject.Find("PlanentScene");
+=======
+            var CenterPart = GameObject.Find("GodivaImage");
+>>>>>>> 030538d46f39f3843591c7b19de7a92c5a9eb4c2
             this.transform.SetParent(CenterPart.transform);
 
             this.transform.GetComponentInChildren<LayoutElement>().preferredWidth = 50f;
             this.transform.GetComponentInChildren<LayoutElement>().preferredHeight = 50f;
         }
+<<<<<<< HEAD
         if (Application.loadedLevelName == "Godiva")
         {
         }
         if (Application.loadedLevelName == "Mainmenu")
+=======
+        if (Application.loadedLevelName == "Main_Scene")
+        {
+        }
+        if (Application.loadedLevelName == "scene_2")
+>>>>>>> 030538d46f39f3843591c7b19de7a92c5a9eb4c2
         {
         }
     }
@@ -107,16 +126,26 @@ public class classdrag : MonoBehaviour {
 
     void MouseDraginMainmenu(Vector3 curPos, Vector3 worldPos)
     {
+<<<<<<< HEAD
         Debug.Log(Input.mousePosition.x + "     " + Input.mousePosition.y);
+=======
+
+
+>>>>>>> 030538d46f39f3843591c7b19de7a92c5a9eb4c2
     }
 
     void OnmouseUpinMainmenu()
     {
+<<<<<<< HEAD
+=======
+        Debug.Log(this.transform.name.ToString());
+>>>>>>> 030538d46f39f3843591c7b19de7a92c5a9eb4c2
         if ((135 <= Input.mousePosition.x) && (Input.mousePosition.x <= 265))
         {
             if ((380 <= Input.mousePosition.y) && (Input.mousePosition.y <= 465))
             {
                 Debug.Log("Godiva");
+<<<<<<< HEAD
                 PlayerPrefs.SetInt(this.transform.name.ToString(), 1);
                 PlayerPrefs.Save();
 
@@ -135,6 +164,15 @@ public class classdrag : MonoBehaviour {
                 DestroyObject(GameObject.Find(this.transform.name.ToString()), 1);
             }
         }
+=======
+                DestroyObject(this, 1);
+                PlayerPrefs.SetInt(this.transform.name.ToString(), 1);
+                PlayerPrefs.Save();
+            }
+        }
+
+        DestroyObject(GameObject.Find(this.transform.name.ToString()), 1);
+>>>>>>> 030538d46f39f3843591c7b19de7a92c5a9eb4c2
     }
 }
 
